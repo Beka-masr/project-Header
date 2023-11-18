@@ -1,0 +1,832 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+:root{
+    --main-color: #6666ff;
+    --hover-main-color: #33f;
+    --head-color: #222222;
+    --color-white: #fff;
+    --font-family: "Font Awesome 6 Free"; 
+    --padding-top: 100px;
+    --padding-bottom: 100px;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ *:focus{
+    outline: none;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Small */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+ /* Medium */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+ /* large */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+/* Start Header */
+header{
+    padding: 0px 15px;
+}
+header .one li:first-child .languges{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    left: 0;
+    padding: 10px 0;
+    z-index: 9999;
+}
+header .one li:first-child .languges span{
+    display: block;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #999;
+}
+header .one li:first-child .languges span:hover{
+    color: var(--main-color);
+}
+header .one li:first-child:hover .languges{
+    display: block;
+}
+header .one li:first-child{
+    padding: 13px 0;
+}
+header .one > li:last-child{
+    padding: 13px 0;
+    margin-left: 20px;
+}
+header .one > li a{
+    transition: 0.3s;
+    padding-right: 18px;
+}
+header  .one li a::before{
+    content: "\f078";
+    font-weight: 900;
+    font-family: var(--font-family);
+    position: absolute;
+    right: 0;
+    font-size: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header  .one li a:hover{
+    color: var(--main-color);
+}
+header  .one li:last-child .languges{
+    display: none;
+    position: absolute;
+    left: -10px;
+    top: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    width: 80px;
+    z-index: 99999;
+}
+header  .one li:last-child .languges span{
+    color: #999;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    padding: 4px 6px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+header  .one li:last-child .languges span:hover{
+    color: var(--main-color);
+}
+header  .one li:last-child:hover .languges{
+    display: block;
+}
+header .two > li > a{
+    transition: 0.3s;
+}
+header .three{
+    display: none;
+    padding: 13px 0;
+}
+header .three > a{
+    padding-right: 15px;
+    transition: 0.3s;
+}
+header .three > a::before{
+    content: "\f078";
+    font-weight: 900;
+    font-family: var(--font-family);
+    position: absolute;
+    right: 0;
+    font-size: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header .three > a:hover{
+    color: var(--main-color);
+}
+@media(max-width: 991px){
+    header .two{
+        display: none;
+    }
+    header .three{
+        display: block;
+    }
+}
+header .three > .links{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+    top: 100%;
+    min-width: 180px;
+    padding: 10px 0;
+    z-index: 9999;
+}
+header .three > .links li a{
+    display: inline-flex;
+    padding: 6px 10px 2px 15px;
+    align-items: center;
+    color: #999;
+    font-size: 16px;
+    transition: 0.3s;
+}
+header .three > .links li a > i{
+    margin-right: 5px;
+    font-size: 14px;
+}
+header .three > .links li a:hover{
+    color: var(--main-color);
+}
+header .three:hover .links{
+    display: block;
+}
+
+/* End Header */
+/* Start Main */
+main {
+    height: 100%;
+    background-image: url(../images/banner-image.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main .container .logo{
+    flex: 1;
+    cursor: pointer;
+}
+main .container .logo .content-mnue{
+    /* There You Code Of Mnue */
+}
+main .container .logo .icon{
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+    position: relative;
+    display: none;
+} 
+main .container .logo .icon span{
+    position: absolute;
+    left: 0;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+main .container .logo .icon span:first-child{
+    width: 100%;
+    top: 0;
+}
+main .container .logo .icon span:nth-child(2){
+    width: 70%;
+    top: 9px;
+}
+main .container .logo .icon span:last-child{
+    width: 40%;
+    top: 18px;
+}
+main .container .logo:hover .icon span:nth-child(2),
+main .container .logo:hover .icon span:last-child{
+    width: 100%;
+}
+@media (max-width: 991px){
+    main .container .logo .icon{
+        display: block;
+    }
+}
+main .container .logo img{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    flex-shrink: 0;
+    height: auto;
+    display: block;
+}
+main .container nav{
+    flex: 1 auto;
+    margin-left: 50px;
+}
+main .content {
+    padding-top: 30px;
+    padding-bottom: var(--padding-bottom);
+}
+main .content .container{
+    padding: 15px;
+    width: 700px;
+    margin: 60px auto;
+    max-width: 100%;
+}
+main .content .container .info{
+    width: 385px;
+    max-width: 100%;
+}
+@media (max-width: 991px){
+    main .content{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 767px){
+    main .content{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    main .content .container{
+        margin: 30px auto;
+    }
+}
+@media (max-width: 575px){
+    main .content{
+        left: 0%;
+        transform: translateX(0);
+        top: 15%;
+    }
+}
+/* Start links Hover Of Shop */
+main .container nav > ul > li > a{
+    padding: 30px 30px 30px 10px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+main .container nav > ul > li:not(:first-child) > a:before{
+    content: "\f078";
+    font-weight: 900;
+    font-family: var(--font-family);
+    position: absolute;
+    right: 12px;
+    font-size: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+main .container nav > ul > li:hover > a{
+    color: var(--main-color);
+}
+main .container nav > ul > li:first-child > a{
+    color: var(--main-color);
+}
+@media (max-width: 991px){
+    main .container nav{
+        display: none;
+    }
+}
+
+main .container nav ul:first-child li:nth-child(2) .link-hover{
+    display: none;
+}
+main .container nav ul:first-child li:nth-child(2):hover .link-hover{
+    display: flex;
+    width: 675px;
+    position: absolute;
+    left: -80px;
+    background-color: white;
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .col-1 {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    padding: 0 30px 30px 30px;
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .title{
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #333;
+    padding: 10px 0 0;
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .col-1 ul li a{
+    padding: 6px 0px;
+    display: block;
+    font-size: 15px;
+    color: #999;
+    word-spacing: 1px;
+    line-height: 1.3;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .col-1 .left-hover ul li a > .new{
+    position: absolute;
+    top: -1px;
+    padding: 1px 4px;
+    background-color: #a6c76c;
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .col-1 .left-hover ul li a > .hot{
+    position: absolute;
+    top: -1px;
+    padding: 1px 4px;
+    background-color: #ef837b;
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    left: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .col-1 .center-hover ul li a > .new{
+    position: absolute;
+    top: -1px;
+    padding: 1px 4px;
+    background-color: #a6c76c;
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    left: 68%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .col-1 ul li a:hover{
+    color: var(--main-color);
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .right-hover{
+    position: relative;
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .right-hover .banner-text{
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .right-hover .banner-text span{
+    display: block;
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+main .container nav ul:first-child li:nth-child(2) .link-hover .right-hover img{
+    height: 100%;
+    max-width: 100%;
+}
+/* End links Hover Of Shop */
+/* Start Content Hover Of Product */
+main .container nav ul:first-child li:nth-child(3) .content-hover{
+    display: none;
+}
+main .container nav ul:first-child li:nth-child(3):hover .content-hover{
+    display: flex;
+    position: absolute;
+    left: 0;
+    width: 450px;
+    gap: 30px;
+    background-color: white;
+    justify-content: space-between;
+}
+main .container nav ul:first-child li:nth-child(3) .content-hover .left-hover .title{
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #333;
+    padding: 10px 0 0;
+}
+main .container nav ul:first-child li:nth-child(3) .content-hover .left-hover{
+    margin-top: 20px;
+    padding: 0 30px 30px 30px;
+}
+main .container nav ul:first-child li:nth-child(3) .content-hover .left-hover ul li a{
+    padding: 6px 0px;
+    display: block;
+    font-size: 15px;
+    color: #999;
+    word-spacing: 1px;
+    line-height: 1.3;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:nth-child(3) .content-hover .left-hover ul li a > .new{
+    position: absolute;
+    top: -1px;
+    padding: 1px 4px;
+    background-color: #a6c76c;
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    left: 73%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container nav ul:first-child li:nth-child(3) .content-hover .left-hover ul li a:hover{
+    color: var(--main-color);
+}
+main .container nav ul:first-child li:nth-child(3) .content-hover .right-hover img{
+    height: 100%;
+    max-width: 100%;
+}
+main .container nav ul:first-child li:nth-child(3) .content-hover .right-hover .img-text{
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+main .container nav ul:first-child li:nth-child(3) .content-hover .right-hover .img-text span{
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+/* End Content Hover Of Product */
+/* Start Content Hover Of Pages */
+main .container nav ul:first-child li:nth-child(4) .content-hover{
+    display: none;
+}
+main .container nav ul:first-child li:nth-child(4):hover .content-hover{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    min-width: 200px;
+    padding: 15px 0;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover > ul > li > a{
+    color: #999;
+    display: block;
+    padding: 8px 25px;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover > ul > li:hover > a{
+    color: var(--main-color);
+}
+/* Start Hover Of About  */
+main .container nav ul:first-child li:nth-child(4) .content-hover > ul li:first-child > ul{
+    display: none;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover ul li:first-child:hover > ul{
+    display: block;
+    position: absolute;
+    right: -180px;
+    top: -15px;
+    background-color: white;
+    padding: 15px 0;
+    min-width: 180px;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover ul li:first-child:hover > ul li{
+    margin-top: 8px;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover ul li:first-child:hover > ul a{
+    padding: 8px 25px;
+    color: #999;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover ul li:first-child:hover > ul a:hover{
+    color: var(--main-color);
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover > ul > li:first-child > a::before{
+    content: "\f078";
+    font-weight: 900;
+    font-family: var(--font-family);
+    position: absolute;
+    right: 8px;
+    font-size: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Start Hover Of About  */
+/* Start Hover Of Contact */
+main .container nav ul:first-child li:nth-child(4) .content-hover ul li:nth-child(2):hover > ul{
+    display: block;
+    position: absolute;
+    right: -180px;
+    top: 0px;
+    background-color: white;
+    padding: 15px 0;
+    min-width: 180px;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover > ul li:nth-child(2) > ul{
+    display: none;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover ul li:nth-child(2):hover > ul li{
+    margin-top: 8px;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover ul li:nth-child(2):hover > ul a{
+    padding: 8px 25px;
+    color: #999;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover ul li:nth-child(2):hover > ul a:hover{
+    color: var(--main-color);
+}
+main .container nav ul:first-child li:nth-child(4) .content-hover > ul > li:nth-child(2) > a::before{
+    content: "\f078";
+    font-weight: 900;
+    font-family: var(--font-family);
+    position: absolute;
+    right: 8px;
+    font-size: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* End Hover Of Contact */
+/* End Content Hover Of Pages */
+/* Start Hover Of Blog */
+main .container nav ul:first-child li .blog-content{
+    display: none;
+}
+main .container nav ul:first-child li:hover .blog-content{
+    display: block;
+    position: absolute;
+    background-color: white;
+    min-width: 230px;
+    left: -70px;
+    top: 100%;
+    padding: 15px 0;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > li > a{
+    padding: 8px 25px;
+    display: block;
+    color: #999;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > li:hover > a{
+    color: var(--main-color);
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > li:not(:first-child, :nth-child(2)) > a::before{
+    content: "\f078";
+    font-weight: 900;
+    font-family: var(--font-family);
+    position: absolute;
+    right: 8px;
+    font-size: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Satrt Hover Of Grid */
+main .container nav ul:first-child li:hover > .blog-content > ul > li:nth-child(3) .grid-content{
+    display: none;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > 
+li:nth-child(3):hover .grid-content{
+    display: block;
+    position: absolute;
+    right: -78%;
+    background-color: white;
+    padding: 15px 0;
+    top: 0;
+    min-width: 180px;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > 
+li:nth-child(3):hover .grid-content li a{
+    display: block;
+    padding: 6px 25px;
+    color: #999;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > 
+li:nth-child(3):hover .grid-content li a:hover{
+    color: var(--main-color);
+}
+/* End Hover Of Grid */
+/* Start Hover Of Masonry */
+main .container nav ul:first-child li:hover > .blog-content > ul > li:nth-child(4) .masonry-content{
+    display: none;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > li:nth-child(4):hover .masonry-content{
+    display: block;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > 
+li:nth-child(4):hover .masonry-content{
+    display: block;
+    position: absolute;
+    right: -78%;
+    background-color: white;
+    padding: 15px 0;
+    top: 0;
+    min-width: 180px;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > 
+li:nth-child(4):hover .masonry-content li a{
+    display: block;
+    padding: 6px 25px;
+    color: #999;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > 
+li:nth-child(4):hover .masonry-content li a:hover{
+    color: var(--main-color);
+}
+/* End Hover Of Masonry */
+/* Start Hover Of Mask */
+main .container nav ul:first-child li:hover > .blog-content> ul > li:nth-child(5) .mask-content{
+    display: none;
+}
+main .container nav ul:first-child li:hover > .blog-content> ul > li:nth-child(5):hover .mask-content{
+    display: block;
+    position: absolute;
+    right: -82%;
+    background-color: white;
+    padding: 15px 0;
+    top: 0;
+    min-width: 180px;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > 
+li:nth-child(5):hover .mask-content li a{
+    display: block;
+    padding: 4px 25px;
+    color: #999;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:hover > .blog-content > ul > 
+li:nth-child(5):hover .mask-content li a:hover{
+    color: var(--main-color);
+}
+/* End Hover Of Mask */
+/* Start Single Post */
+main .container nav ul:first-child li > .blog-content > ul > li:nth-child(6) .single-content{
+    display: none;
+}
+main .container nav ul:first-child li > .blog-content > ul > li:nth-child(6):hover .single-content{
+    display: block;
+    position: absolute;
+    right: -96%;
+    background-color: white;
+    padding: 15px 0;
+    top: 0;
+    min-width: 180px;
+}
+main .container nav ul:first-child li:nth-child(5):hover > .blog-content > ul > 
+li:nth-child(6):hover .single-content li a{
+    display: block;
+    padding: 6px 25px;
+    color: #999;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:nth-child(5):hover > .blog-content > ul > 
+li:nth-child(6):hover .single-content li a:hover{
+    color: var(--main-color);
+}
+/* End Single Post */
+/* End Hover Of Blog */
+/* Start Elements */
+main .container nav ul:first-child li > .elements-content{
+    display: none;
+}
+main .container nav ul:first-child li:hover > .elements-content{
+    display: block;
+    position: absolute;
+    background-color: white;
+    padding: 15px 0;
+    top: 100%;
+    min-width: 180px;
+    left: -60px;
+}
+main .container nav ul:first-child li:hover > .elements-content ul li a{
+    display: block;
+    padding: 8px 25px;
+    color: #999;
+    transition: 0.3s;
+}
+main .container nav ul:first-child li:hover > .elements-content ul li a:hover{
+    color: var(--main-color);
+}
+/* End Elements */
+main .container .shops{
+    flex: 1 auto;
+}
+main .container .shops .shop-cart{
+    position: absolute;
+    color: white;
+    right: 65px;
+    top: 13px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    padding: 10px;
+}
+main .container .shops .shop{
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    font-weight: bold;
+    padding: 25px 15px;
+}
+main .container .shops .shop i{
+    margin-right: 15px;
+}
+main .container .shops .shop .products{
+    display: none;
+}
+main .container .shops .shop:hover .products{
+    display: block;
+    position: absolute;
+    min-width: 250px;
+    right: 0;
+    background-color: white;
+    color: #999;
+    padding: 25px 25px;
+    top: 65px;
+    text-align: center;
+    font-weight: normal;
+    max-width: 100%;
+}
+main .container .shops .shop:hover i{
+    color: var(--main-color);
+}
+main .container .shops .shop:hover .dollar{
+    color: var(--main-color);
+}
+main .container .shops .icon-search{
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+main .container .shops .icon-search:hover{
+    color: var(--main-color);
+}
+@media (max-width: 991px){
+    main .container .shops .icon-search{
+        display: none;
+    }
+}
+
+main .content .container .btn-shop{
+    gap: 25px;
+    width: 505px;
+}
+main .content .container .btn-shop div a{
+    padding: 15px 60px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+main .content .container .btn-shop div:not(:first-child) a{
+    border: 1px solid white;
+}
+main .content .container .btn-shop div:last-child a:hover{
+    background-color: var(--main-color);
+    border-color: transparent;
+}
+main .content .container .btn-shop div:first-child a i{
+    margin-right: 10px;
+}
+main .content .container .btn-shop div:first-child a:hover{
+    background-color: var(--hover-main-color);
+}
+@media (max-width: 767px){
+    main .content .container .btn-shop{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 250px;
+    }
+}
+/* End Main */
+
+
